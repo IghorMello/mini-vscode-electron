@@ -1,0 +1,49 @@
+:root {
+  --white: #fff;
+  --background: #201b2d;
+  --blue: #0078d7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  padding: 15px;
+  margin: 0;
+  background: var(--background);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  margin-left: 15px;
+  max-width: 50px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  border: 0;
+  border-radius: 4px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 15px 10px;
+  font-size: 16px;
+}
+
+.CodeMirror {
+  border: 3px solid var(--white);
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px;
+}

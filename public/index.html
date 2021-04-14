@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini VSCode em Electron JS</title>
+
+    <link rel="icon" href="https://code.visualstudio.com/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://codemirror.net/theme/dracula.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>
+        Micro
+        <img src="https://user-images.githubusercontent.com/674621/71187801-14e60a80-2280-11ea-94c9-e56576f76baf.png">
+    </h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/javascript/javascript.min.js"></script>
+</body>
+
+<textarea id="editor">function myScript() { return 404 }</textarea>
+
+<footer>
+    <button id="btnSalvar" onclick="salvarArquivo()">Salvar Arquivo</button>
+</footer>
+
+<script>
+    const $myCodeMirror = CodeMirror.fromTextArea(document.querySelector('#editor'), {
+        lineNumbers: true,
+        theme: 'dracula',
+        mode: "javascript"
+    });
+
+    const { ipcRenderer } = require('electron')
+    function salvarArquivo() {
+        const conteudoDoArquivo = $myCodeMirror.getValue();
+        console.log(conteudoDoArquivo)
+
+        ipcRenderer.send('renderer/salvar_arquivo', conteudoDoArquivo)
+    }
+
+    ipcRenderer.on('main/salvar_arquivo', function (event, mensagemDaMain) {
+        console.log('Resposta do main: ', mensagemDaMain)
+    })
+</script>
+</body>
+
+</html>
