@@ -2,7 +2,6 @@
     <img alt="code" title="code" src="./public/01.gif" width="800px" />
 </h3>
 
-
 <p align="center"> :computer: <strong>Em progresso ...</strong> 🚧</p>
 
 <p align="center"> 
@@ -64,7 +63,7 @@ $ cd mini-vscode-electron
 # Instale as depedências
 $ yarn
 
-# Rode o comando
+# Rode o comando abaixo
 $ yarn start
 
 ```
