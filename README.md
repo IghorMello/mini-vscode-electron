@@ -10,10 +10,6 @@
   <a href="https://github.com/IghorMello">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
- 
- <a href="https://github.com/IghorMello">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" target="_blank" />
-  </a>
 </p>
 
 <br>
