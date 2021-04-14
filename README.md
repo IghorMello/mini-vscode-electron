@@ -35,7 +35,7 @@
 
 :memo: Mini VS Code desenlvovido em ElectronJS
 <br><br>
-:tada: Projeto baseado nos videos e aulas oferecidas pelo canal [Código Fonte TV](https://www.youtube.com/user/codigofontetv).
+:tada: Projeto baseado nos vídeos e aulas oferecidas pelo canal [Código Fonte TV](https://www.youtube.com/user/codigofontetv).
 
 <br>
 
